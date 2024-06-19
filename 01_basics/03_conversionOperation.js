@@ -43,3 +43,44 @@ console.log(undefindeInNumber)  // 0 *noted: undefined converted to 0 (undefined
 /*  to String
  *  33 -->"33" (numer to string) * 
  */
+
+// ********************************* OPERATIONS *************************************
+
+let value = 3
+let negValue = -value
+// console.log(negValue) // -3
+
+// Basic operation
+/*
+console.log(2 + 2)  // 4
+console.log(2 - 2)  // 0
+console.log(2 * 2)  // 4
+console.log(2**2)   // 4
+console.log(2 / 2)  // 1
+console.log(2 % 2)  // 0
+*/
+
+let str1 = "hello,"
+let str2 = " badal!"
+
+let str3 = str1 + str2
+console.log(str3)
+
+
+console.log("1" + 2)    // 12
+console.log(1 + "2")    // 12
+console.log("1" + 2 + 2)    // 122
+console.log(1 + 2 + "2")    // 32
+
+console.log(+true); // 1
+// console.log(true+)   // error
+console.log(+"");   // 0
+
+// it will work it is not clean so don't do this.
+let num1, num2, num3
+// num1 = num2 = num3 = 2 + 2  
+
+// prefix/ postfix increment/decrement
+let gameCounter = 100
+console.log(gameCounter++)  
+console.log(++gameCounter)
