@@ -14,3 +14,15 @@ var accountPassowrd = "1234566"
 console.log(accountEmail)
 // console.log([accountId, accountEmail, accountPassowrd, accountCity, accountState])
 console.table([accountId, accountEmail, accountPassowrd, accountCity, accountState])
+
+// Summary ----------------
+function example() {
+    if (true) {
+        var a = 1;  // Function-scoped
+        let b = 2;  // Block-scoped
+        const c = 3; // Block-scoped and constant
+    }
+    console.log(a); // 1
+    console.log(b); // ReferenceError: b is not defined
+    console.log(c); // ReferenceError: c is not defined
+}
