@@ -1,0 +1,81 @@
+Date() constructor
+The Date() constructor creates Date objects. When called as a function, it returns a string representing the current time.
+
+SYNTAX
+
+new Date()
+new Date(value)
+new Date(dateString)
+new Date(dateObject)
+
+new Date(year, monthIndex)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+
+Date()
+
+Note: Date() can be called with or without new, but with different effects
+
+No parameters
+When no parameters are provided, the newly-created Date object represents the current 
+date and time as of the time of instantiation. The returned date's timestamp is the same 
+as the number returned by Date.now().
+
+Time value or timestamp number
+--value---
+An integer value representing the timestamp (the number of milliseconds since midnight at
+the beginning of January 1, 1970, UTC — a.k.a. the epoch).
+
+Date string
+--dateString--
+A string value representing a date, parsed and interpreted using the same algorithm implemented 
+by Date.parse(). See date time string format for caveats on using different formats.
+
+Date object
+dateObject
+An existing Date object. This effectively makes a copy of the existing Date object with the same 
+date and time. This is equivalent to new Date(dateObject.valueOf()), except the valueOf() method 
+is not called.
+
+Individual date and time component values
+
+Given at least a year and month, this form of Date() returns a Date object whose component values 
+(year, month, day, hour, minute, second, and millisecond) all come from the following parameters. 
+Any missing fields are given the lowest possible value (1 for day and 0 for every other component). 
+The parameter values are all evaluated against the local time zone, rather than UTC. Date.UTC() 
+accepts similar parameters but interprets the components as UTC and returns a timestamp.
+
+If any parameter overflows its defined bounds, it "carries over". For example, if a monthIndex greater 
+than 11 is passed in, those months will cause the year to increment; if a minutes greater than 59 is passed in, 
+hours will increment accordingly, etc. Therefore, 
+new Date(1990, 12, 1) will return January 1st, 1991; new Date(2020, 5, 19, 25, 65) will return 2:05 A.M. June 20th, 2020.
+
+Similarly, if any parameter underflows, it "borrows" from the higher positions. 
+For example, new Date(2020, 5, 0) will return May 31st, 2020.
+
+year
+Integer value representing the year. Values from 0 to 99 map to the years 1900 to 1999. All other values are the actual year. See the example.
+
+monthIndex
+Integer value representing the month, beginning with 0 for January to 11 for December.
+
+day Optional
+Integer value representing the day of the month. Defaults to 1.
+
+hours Optional
+Integer value between 0 and 23 representing the hour of the day. Defaults to 0.
+
+minutes Optional
+Integer value representing the minute segment of a time. Defaults to 0.
+
+seconds Optional
+Integer value representing the second segment of a time. Defaults to 0.
+
+milliseconds Optional
+Integer value representing the millisecond segment of a time. Defaults to 0.
+
+
+
