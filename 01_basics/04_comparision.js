@@ -18,7 +18,7 @@ console.log("02" > 1)   // true
 console.log(null > 0)   // false
 console.log(null == 0)  // false    called equality check
 console.log(null >= 0)  // true
-// The reason is that an equality check == an comparisions >, <, >= and <= work differently.
+// The reason is that an equality check == and comparisions >, <, >= and <= work differently.
 // Comparisions convert null to a numeber, treating it as 0.
 // That's why 3rd null >=  is true and 1st null > 0 i false.
 
