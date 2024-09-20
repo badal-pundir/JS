@@ -19,11 +19,12 @@ let nullInNumber = Number(nullValue)
 console.log(typeof(nullInNumber))   // number
 console.log(nullInNumber)   // 0 *noted: null converted to 0 (null --> 0).
 
-// conversion of undefinde to Number
+console.log("conversion of undefinde to Number") 
 let undefindeValue = null
 let undefindeInNumber = Number(undefindeValue)
 console.log(typeof(undefindeInNumber))   // number
-console.log(undefindeInNumber)  // 0 *noted: undefined converted to 0 (undefined --> 0).
+console.log("undefinedValue: " + undefindeValue)
+console.log("undefinedNumber: " + undefindeInNumber)  // 0 *noted: undefined converted to 0 (undefined --> 0).
 
 /* to Number
 *   "33" --> 33
@@ -45,7 +46,7 @@ console.log(undefindeInNumber)  // 0 *noted: undefined converted to 0 (undefined
  */
 
 // ********************************* OPERATIONS *************************************
-
+// video 07
 let value = 3
 let negValue = -value
 // console.log(negValue) // -3
@@ -72,6 +73,7 @@ console.log(1 + "2")    // 12
 console.log("1" + 2 + 2)    // 122
 console.log(1 + 2 + "2")    // 32
 
+console.log(true);  // true
 console.log(+true); // 1
 // console.log(true+)   // error
 console.log(+"");   // 0
