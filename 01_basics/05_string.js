@@ -28,7 +28,7 @@ const firstName = completeName.substring(0, splitIndex)
 let name_len_ = completeName.length
 // sub-string
 const surName = completeName.substring(splitIndex + 1, name_len_ )
-console.log(`my name id ${firstName} ${surName}`)
+console.log(`my name is ${firstName} ${surName}`)
 
 const reverseName = completeName.slice(-3, 4)   // slice can take -ve value but substring() not.
 console.log(reverseName)
